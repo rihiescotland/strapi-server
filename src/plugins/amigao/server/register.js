@@ -14,7 +14,7 @@ module.exports = async ({ strapi }) => {
 };
 
 async function generateJson() {
-  const jsonData = fs.readFileSync(path.resolve(__dirname, 'public', '.well-known', 'assetlinks.json'), 'utf8');
+  const jsonData = fs.readFileSync(path.resolve(__dirname, 'public', 'assetlinks.json'), 'utf8');
   const filledJsData = _.template(jsonData)({
     backendUrl: strapi.config.server.url,
   });
