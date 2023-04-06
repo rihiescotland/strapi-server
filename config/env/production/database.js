@@ -12,7 +12,7 @@ module.exports = ({ env }) => {
         database,
         user,
         password,
-        schema: env.env("DATABASE_SCHEMA"),
+        schema: env("DATABASE_SCHEMA"),
         ssl: env.bool("DATABASE_SSL"),
       },
       debug: false,
